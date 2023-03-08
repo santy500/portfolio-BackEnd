@@ -53,6 +53,9 @@ public class ProyectoService implements IProyectoService{
         if(proy.getFecFin()==0){
             proy.setFecFin(buscarProyecto(id).getFecFin());
         }
+        if(proy.getLink()==""){
+            proy.setLink(buscarProyecto(id).getLink());
+        }
         repo.save(proy);
     }
     

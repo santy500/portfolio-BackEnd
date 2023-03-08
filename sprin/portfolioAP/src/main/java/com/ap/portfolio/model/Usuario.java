@@ -6,30 +6,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Setter @Getter
 @Entity
+@Data
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    @Column(name="email")
-    private String email;
-    @Column(name="password")
-    private String password;
-
-    public Usuario() {
-    }
-
-    public Usuario(int id, String email, String password) {
-        this.id = id;
-        this.email = email;
-        this.password = password;
-    }
-            
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idusuario")
+    private Integer id;
     
+    private String nombre;
+    private String email;
+    private String Password;
     
 }

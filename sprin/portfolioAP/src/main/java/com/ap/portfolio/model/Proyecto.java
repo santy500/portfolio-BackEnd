@@ -26,17 +26,20 @@ public class Proyecto {
     private String descripcion;
     @Column(name="imagen",length=200, nullable=false)
     private String imagen;
-
+    @Column(name="link",length=200, nullable=false)
+    private String link;
+    
     public Proyecto() {
     }
 
-    public Proyecto(int id, String nombre, int fecInicio, int fecFin, String descripcion, String imagen) {
+    public Proyecto(int id, String nombre, int fecInicio, int fecFin, String descripcion, String imagen,String link) {
         this.id = id;
         this.nombre = nombre;
         this.fecInicio = fecInicio;
         this.fecFin = fecFin;
         this.descripcion = descripcion;
         this.imagen = imagen;
+        this.link = link;
     }
     
     

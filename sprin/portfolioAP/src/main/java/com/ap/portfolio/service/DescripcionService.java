@@ -35,6 +35,18 @@ public class DescripcionService implements IDescripcionService {
         if(des.getImagen()==""){
             des.setImagen(verDescripcion(id).getImagen());
         }
+        if(des.getInstagram()==""){
+            des.setInstagram(verDescripcion(id).getInstagram());
+        }
+        if(des.getTwitter()==""){
+            des.setTwitter(verDescripcion(id).getTwitter());
+        }
+        if(des.getGithub()==""){
+            des.setGithub(verDescripcion(id).getGithub());
+        }
+        if(des.getFondo()==""){
+            des.setFondo(verDescripcion(id).getFondo());
+        }
         repo.save(des);
     }
     
