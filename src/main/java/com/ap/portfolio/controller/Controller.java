@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = {"https://portfolio-frontend-santiago.web.app"})
 public class Controller {
 
         
@@ -48,13 +47,13 @@ public class Controller {
             desServ.crearDescripcion(des);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PutMapping("/api/edit/descripcion")
         public void editarDescripcion(@RequestBody Descripcion des){
             desServ.editarDescripcion(des, 1);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/verDescripcion")
         //@ResponseBody
         public Descripcion verDescripcion (){
@@ -63,163 +62,163 @@ public class Controller {
         }
 
         //TRABAJO
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PostMapping("/api/new/trabajo")
         public void agregarTrabajo(@RequestBody Trabajo trab){
             trabServ.crearTrabajo(trab);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/verTrabajos")
         public List<Trabajo> verTrabajos (){
            return trabServ.verTrabajos();  
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @DeleteMapping("/api/borrarTrabajo/{id}")
         public void borrarTrabajo(@PathVariable int id){
             trabServ.eliminarTrabajo(id);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/buscarTrabajo/{id}")
         public Trabajo buscarTrabajo(@PathVariable int id){
            return trabServ.buscarTrabajo(id);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PutMapping("/api/edit/trabajo/{id}")
         public void editarTrabajo(@RequestBody Trabajo trab, @PathVariable int id){
             trabServ.editarTrabajo(trab, id);
         }
         
         //ESTUDIO
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PostMapping("/api/new/estudio")
         public void agregarEstudio(@RequestBody Estudio est){
             estServ.crearEstudio(est);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/verEstudios")
         public List<Estudio> verEstudios (){
            return estServ.verEstudios();  
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @DeleteMapping("/api/borrarEstudio/{id}")
         public void borrarEstudio(@PathVariable int id){
             estServ.eliminarEstudio(id);
         }
             
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/buscarEstudio/{id}")
         public Estudio buscarEstudio(@PathVariable int id){
            return estServ.buscarEstudio(id);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PutMapping("/api/edit/estudio/{id}")
         public void editarEstudio(@RequestBody Estudio est, @PathVariable int id){
             estServ.editarEstudio(est, id);
         }
         
         //PROGRESO
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PostMapping("/api/new/progreso")
         public void agregarProgreso(@RequestBody Progreso pro){
             proServ.crearProgreso(pro);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/verProgresos")
         public List<Progreso> verProgresos (){
            return proServ.verProgresos();  
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @DeleteMapping("/api/borrarProgreso/{id}")
         public void borrarProgreso(@PathVariable int id){
             proServ.eliminarProgreso(id);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/buscarProgreso/{id}")
         public Progreso buscarProgreso(@PathVariable int id){
            return proServ.buscarProgreso(id);
            
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PutMapping("/api/edit/progreso/{id}")
         public void editarProgreso(@RequestBody Progreso pro, @PathVariable int id){
             proServ.editarProgreso(pro, id);
         }
         
          //PROGRESO SOFT
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PostMapping("/api/new/progresoSoft")
         public void agregarProgresoSoft(@RequestBody ProgresoSoft pro){
             proSoftServ.crearProgresoSoft(pro);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/verProgresosSoft")
         public List<ProgresoSoft> verProgresosSoft (){
            return proSoftServ.verProgresosSoft();  
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @DeleteMapping("/api/borrarProgresoSoft/{id}")
         public void borrarProgresoSoft(@PathVariable int id){
             proSoftServ.eliminarProgresoSoft(id);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/buscarProgresoSoft/{id}")
         public ProgresoSoft buscarProgresoSoft(@PathVariable int id){
            return proSoftServ.buscarProgresoSoft(id);
            
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PutMapping("/api/edit/progresoSoft/{id}")
         public void editarProgresoSoft(@RequestBody ProgresoSoft pro, @PathVariable int id){
             proSoftServ.editarProgresoSoft(pro, id);
         }
         
         //PROYECTO 
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PostMapping("/api/new/proyecto")
         public void agregarProyecto(@RequestBody Proyecto proy){
             proyServ.crearProyecto(proy);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/verProyectos")
         public List<Proyecto> verProyectos (){
            return proyServ.verProyectos();  
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @DeleteMapping("/api/borrarProyecto/{id}")
         public void borrarProyecto(@PathVariable int id){
             proyServ.eliminarProyecto(id);
         }
 
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @GetMapping("/api/buscarProyecto/{id}")
         public Proyecto buscarProyecto(@PathVariable int id){
            return proyServ.buscarProyecto(id);
         }
         
-        @CrossOrigin(origins = "http://localhost:4200")
+        @CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         @PutMapping("/api/edit/proyecto/{id}")
         public void editarProyecto(@RequestBody Proyecto proy, @PathVariable int id){
             proyServ.editarProyecto(proy, id);
         }
         
-        //@CrossOrigin(origins = "http://localhost:4200")
+        //@CrossOrigin(origins = "https://portfolio-frontend-santiago.web.app")
         //@PutMapping("/token")
         //@ResponseBody
         //public Token autorizar(@RequestBody Usuario user){
