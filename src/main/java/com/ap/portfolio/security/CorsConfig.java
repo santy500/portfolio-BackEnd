@@ -16,12 +16,12 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry){
                 registry.addMapping("/login")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://portfolio-frontend-santiago.web.app")
                         .allowedMethods("*")
                         .exposedHeaders("*");
                 
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://portfolio-frontend-santiago.web.app")
                         .allowedMethods("*");
             }
         };
